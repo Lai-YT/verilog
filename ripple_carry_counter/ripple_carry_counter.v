@@ -26,11 +26,11 @@ endmodule  // T_FF
 
 // D-type flip-flops
 
-// D  C  Q	Qnext
-// 0  1	X	0
-// 1  1	X	1
-// X  0	0	0
-// X  0	1	1
+// D C Q Qnext
+// 0 1 X 0
+// 1 1 X 1
+// X 0 0 0
+// X 0 1 1
 module D_FF(q, d, clk, reset);
 	output q;
 	input d, clk, reset;
