@@ -1,5 +1,5 @@
 
-module div_two_counter(clk_in, enable, reset, clk_out);
+module div_two_clk(clk_in, enable, reset, clk_out);
 
 	input clk_in, enable, reset;
 	output clk_out;
@@ -13,7 +13,7 @@ module div_two_counter(clk_in, enable, reset, clk_out);
 		clk_out <= 1'b0;
 	else if (enable)
 		clk_out <= !clk_out;
-	//	use <= mean assign after this block
+	//	use <= means assign after this block
 	//	= means immidiate assign 
 	
 endmodule

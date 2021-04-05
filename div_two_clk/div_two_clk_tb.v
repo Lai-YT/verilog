@@ -1,9 +1,9 @@
 
-module div_two_counter_tb;
+module div_two_clk_tb;
 	reg clk_in, enable, reset;
 	wire clk_out;
 	
-	div_two_counter INST1(
+	div_two_clk INST1(
 		.clk_in(clk_in),
 		.enable(enable),
 		.reset(reset),
