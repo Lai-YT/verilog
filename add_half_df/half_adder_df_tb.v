@@ -1,9 +1,9 @@
 
-module half_adder_bh_testbench;
+module half_adder_df_tb;
 	reg a, b;
 	wire sum, c_out;
 
-	add_half_bh ahbh(sum, c_out, a, b);
+	add_half_df ahdf(sum, c_out, a, b);
 
 	initial
 	begin
