@@ -1,12 +1,15 @@
 
 module demux_tb;
-	
+
 	reg a, b, en;
-	wire [3:0] z_g;
-	
-	demux_glv dmg(a, b, en, z_g);
-	
-	initial 
+	wire[3:0] z_g, z_d, Z_b;
+
+	demux_gl dmg(a, b, en, z_g);
+	demux_df dmd(a, b, en, z_d);
+	demux_bh dmb(a, b, en, z_b);
+
+
+	initial
 		begin
 		// comment in order of b, a, en
 			// 0, 0, 0
@@ -41,7 +44,5 @@ module demux_tb;
 			#10
 			$finish;
 		end
-		
-endmodule
 
-		
+endmodule

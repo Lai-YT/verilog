@@ -1,8 +1,7 @@
 
 // gate level model
-module demux_glv(a, b, en, z);
-	input a, b, en;
-	output[3:0] z;
+module demux_gl(input a, b, en, output[3:0] z);
+
 	wire a_bar, b_bar;
 	
 	not v0(a_bar, a);

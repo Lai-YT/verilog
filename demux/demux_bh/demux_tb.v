@@ -1,12 +1,13 @@
 
 module demux_tb;
-	
+
 	reg a, b, en;
-	wire [3:0] z_b;
-	
+	wire[3:0] Z_b;
+
 	demux_bh dmb(a, b, en, z_b);
-	
-	initial 
+
+
+	initial
 		begin
 		// comment in order of b, a, en
 			// 0, 0, 0
@@ -41,7 +42,5 @@ module demux_tb;
 			#10
 			$finish;
 		end
-		
-endmodule
 
-		
+endmodule
