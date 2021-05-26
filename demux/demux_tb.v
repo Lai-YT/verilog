@@ -2,7 +2,7 @@
 module demux_tb;
 
 	reg a, b, en;
-	wire[3:0] z_g, z_d, Z_b;
+	wire[3:0] z_g, z_d, z_b;
 
 	demux_gl dmg(a, b, en, z_g);
 	demux_df dmd(a, b, en, z_d);
