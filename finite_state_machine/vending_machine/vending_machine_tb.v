@@ -35,12 +35,12 @@ module vending_machine_tb;
 	always
 	begin
 	// path 1
-		// start
+		// start(10)
 		#3
 		money = 2'b01;
 		#1
 		money = 2'b00;
-		// not_enough
+		// not_enough(10)
 		#3
 		money = 2'b01;
 		#1
@@ -48,23 +48,66 @@ module vending_machine_tb;
 		// buy_twenty
 		
 	// path 2
-		// start
+		// start(10)
 		#3
 		money = 2'b01;
 		#1
 		money = 2'b00;
-		// not_enough
+		// not_enough(50)
 		#3
 		money = 2'b10;
 		#1
 		money = 2'b00;
-		// buy_all
+		// buy_all(20)
 		#3
 		select = 2'b01;
 		#1
 		select = 2'b00;
 		
+	// path 3
+		// start(10)
+		#3
+		money = 2'b01;
+		#1
+		money = 2'b00;
+		// no_enough(50)
+		#3
+		money = 2'b10;
+		#1
+		money = 2'b00;
+		// buy_all(50)
+		#3
+		select = 2'b10;
+		#1
+		select = 2'b00;
+		
+	// path 4
+		//start(50)
+		#3
+		money = 2'b10;
+		#1
+		money = 2'b00;
+		// buy_all(20)
+		#3
+		select = 2'b01;
+		#1
+		select = 2'b00;
+		
+	// path 5
+		// start(50)
+		#3
+		money = 2'b10;
+		#1
+		money = 2'b00;
+		// buy_all(50)
+		#3
+		select = 2'b10;
+		#1
+		select = 2'b00;
+		
+		#5
 		$finish;
+		
 	end
 	
 	

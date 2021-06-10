@@ -4,12 +4,13 @@
 	clk
 		state is checked every clk change
 	money
-		0, 4: no money paid
+		0, 3: no money paid
 		1:    20 dollars
 		2:    50 dollars
 	select:
-		0: 20 dollars item
-		1: 50 dollars item
+		0, 3: no selection
+		1:    20 dollars item
+		2:    50 dollars item
 @output
 	item
 		0: 20 dollars item
@@ -31,9 +32,10 @@ module vending_machine(clk, money, select, item, change);
 		fifty = 2'b10;
 		
 	// select kinds
-	localparam
-		get_twenty = 1'b0,
-		get_fifty = 1'b1;
+	localparam[1:0]
+		no_selection = 2'b00,
+		get_twenty = 2'b01,
+		get_fifty = 2'b10;
 	
 	// item kinds
 	localparam[1:0]
